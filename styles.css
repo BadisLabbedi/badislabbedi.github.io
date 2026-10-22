@@ -17,3 +17,14 @@
 .acknowledgements{margin-top:35px}.acknowledgements h2{font-size:25px;margin-bottom:7px}.acknowledgements p{margin:0;text-align:justify}@media(max-width:760px){.acknowledgements{margin-top:28px}.acknowledgements h2{font-size:24px}}
 
 #talks{margin-bottom:31px}.teaching-entry p{margin:0}.teaching-entry h4{margin-bottom:5px}
+
+/* Keep the portrait visible above About on phones, independently of navigation. */
+@media(max-width:760px){
+  .sidebar{display:block;padding:20px 20px 0;border-bottom:0}
+  .sidebar>.site-name{display:none}
+  .portrait-toggle{width:210px;height:210px;margin:12px auto 0}
+  .portrait-credit{margin:5px 0 0}
+  .sidebar nav{display:none}
+  .sidebar.open nav{display:flex;margin-top:18px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+  main{padding-top:24px}
+}
