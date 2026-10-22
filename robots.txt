@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://badislabbedi.github.io/sitemap.xml
