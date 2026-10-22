@@ -10,9 +10,12 @@
   <meta property="og:description" content="Theoretical physics at the University of Chicago. Research, education, and talks.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://badislabbedi.github.io/portfolio/">
-  <link rel="icon" href="assets/monogram.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/portrait-icon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/garamond.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    try { if (localStorage.getItem('portfolio-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (_) {}
+  </script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -20,7 +23,9 @@
   <header class="mobile-bar"><a href="#about">Badis Labbedi</a><button id="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">Menu</button></header>
   <aside class="sidebar" id="sidebar" aria-label="Site navigation">
     <a class="site-name" href="#about">Badis Labbedi</a>
-    <img class="sidebar-photo" src="assets/portrait.png" width="495" height="504" alt="Line drawing portrait of Badis Labbedi">
+    <button class="portrait-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+      <img class="sidebar-photo" src="assets/portrait.png" width="495" height="504" alt="Line drawing portrait of Badis Labbedi">
+    </button>
     <nav aria-label="On this page">
       <a class="active" href="#about" aria-current="location">About</a>
       <a href="#science">Science</a>
@@ -49,11 +54,11 @@
       <section id="positions" aria-labelledby="positions-heading">
         <h3 class="line-heading" id="positions-heading">Education</h3>
         <div class="education-row"><span class="institution">University of Chicago</span><span class="education-description">Theoretical Physics</span></div>
-        <p class="timeline-marker">2024</p>
+        <p class="education-year">2024</p>
         <div class="education-row"><span class="institution">UWC Costa Rica</span><span class="education-description">International Baccalaureate</span></div>
-        <p class="timeline-marker">2022</p>
+        <p class="education-year">2022</p>
         <div class="education-row"><span class="institution">Lycée Pilote Bourguiba Tunis</span></div>
-        <p class="timeline-marker education-end">2020</p>
+        <p class="education-year education-end">2020</p>
       </section>
 
       <section id="research" aria-labelledby="research-heading">
@@ -68,12 +73,12 @@
         <p class="timeline-marker">2025</p>
         <article class="research-entry" id="dark-matter">
           <h4>Axion Field Correlators from Entangled Quantum Cavities</h4>
-          <p class="project-resource"><a href="https://ugradresearchsymposium2026.omeka.net/items/show/618" target="_blank" rel="noopener noreferrer">Undergrad Research Symposium Poster</a></p>
+          <p class="project-resource"><a href="https://ugradresearchsymposium2026.omeka.net/items/show/618" target="_blank" rel="noopener noreferrer">[Undergrad Research Symposium Poster]</a></p>
         </article>
         <p class="timeline-marker">2023</p>
         <article class="research-entry" id="aupple">
           <h4>AuPPLE: Augmented Physical Priors through Language Enhancement using Self-Supervised Learning</h4>
-          <p class="project-resource"><a href="https://ieeexplore.ieee.org/abstract/document/10392629/" target="_blank" rel="noopener noreferrer">Paper</a></p>
+          <p class="project-resource"><a href="https://ieeexplore.ieee.org/abstract/document/10392629/" target="_blank" rel="noopener noreferrer">[Paper]</a></p>
         </article>
       </section>
 

@@ -1,4 +1,20 @@
 (() => {
+  const themeToggle = document.querySelector('#theme-toggle');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const applyTheme = dark => {
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    const label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeToggle.setAttribute('aria-label', label);
+    themeToggle.title = label;
+    themeMeta.content = dark ? '#14181d' : '#ffffff';
+  };
+  applyTheme(document.documentElement.dataset.theme === 'dark');
+  themeToggle.addEventListener('click', () => {
+    const dark = document.documentElement.dataset.theme !== 'dark';
+    applyTheme(dark);
+    try { localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light'); } catch (_) {}
+  });
   const toggle = document.querySelector('#menu-toggle');
   const sidebar = document.querySelector('#sidebar');
   const links = [...document.querySelectorAll('.sidebar nav a')];
