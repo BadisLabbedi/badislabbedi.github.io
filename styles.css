@@ -13,3 +13,5 @@
 @media print{:root[data-theme="dark"]{--background:#fff;--ink:#2c3e50;--link:#407fbf;--border:#c9c9c9;--soft:#f6f6f6;color-scheme:light}}
 
 :root[data-theme="dark"] .sidebar-photo{filter:grayscale(1) invert(1);mix-blend-mode:screen}
+
+.acknowledgements{margin-top:35px}.acknowledgements h2{font-size:25px;margin-bottom:7px}.acknowledgements p{margin:0}@media(max-width:760px){.acknowledgements{margin-top:28px}.acknowledgements h2{font-size:24px}}
